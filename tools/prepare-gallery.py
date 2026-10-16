@@ -27,6 +27,12 @@ items = {
         (generated / "exec-8657af1a-e1e6-4f94-be5e-28840c16f0a9.png", "projects", None),
         (generated / "exec-fb3bfaa7-197e-4c44-af77-32b6f5723b2f.png", "keys", None),
     ],
+    "synccode": [
+        (source / "SyncCode/landing.jpeg", "landing", 1450),
+        (source / "SyncCode/share.png", "share", None),
+        (source / "SyncCode/login.png", "login", None),
+        (source / "SyncCode/ai.png", "ai", None),
+    ],
     "dentalflow-android": [
         (source / "DentalFlow-Android/02-appointments.png", "appointments", None),
         (source / "DentalFlow-Android/01-owner-dashboard.png", "owner", None),

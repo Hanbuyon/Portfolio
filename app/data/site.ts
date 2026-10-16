@@ -20,7 +20,7 @@ export interface Project {
   stack: string[];
   live?: string;
   github?: string;
-  art: "manazil" | "khadmat" | "manhwa" | "dental-app" | "dental-web" | "switchyard" | "iftar" | "school";
+  art: "manazil" | "khadmat" | "manhwa" | "dental-app" | "dental-web" | "switchyard" | "iftar" | "school" | "synccode";
 }
 
 export const profile = {
@@ -84,6 +84,20 @@ export const projects: Project[] = [
     },
     stack: ["React", "TypeScript", "Supabase", "Gemini", "OCR", "RAG"],
     github: "https://github.com/Hanbuyon/Manhwa-Tool-Kit",
+  },
+  {
+    slug: "synccode", number: "09", title: "SyncCode", category: "web", status: "live", featured: true, year: "2026", art: "synccode",
+    summary: { ar: "محرر مستندات تعاوني يزامن تغييرات المستخدمين باستخدام Yjs، مع حفظ المستندات وإدارة الوصول.", en: "A collaborative document editor that synchronizes user changes with Yjs, backed by document persistence and access controls." },
+    challenge: { ar: "تمكين عدة مستخدمين من تحرير المستند نفسه مع الحفاظ على اتساق التغييرات وإتاحة نسخة محلية للعمل.", en: "Let multiple users edit the same document while keeping changes consistent and maintaining a local copy for continued work." },
+    role: { ar: "مشروع مكتمل وفق التوثيق المرفق؛ يصف هذا العرض بنية المنتج ووظائفه الموثقة.", en: "A completed project according to the supplied documentation; this case study describes its documented product architecture and features." },
+    solution: { ar: "يبني المحرر على Next.js وReact وProseMirror، ويستخدم Yjs لمزامنة التغييرات التعاونية وSocket.io لتبادلها، مع Supabase للمصادقة والصلاحيات وحفظ المستندات، وIndexedDB للتخزين المحلي.", en: "The editor uses Next.js, React, and ProseMirror, with Yjs for collaborative state, Socket.io to exchange updates, Supabase for authentication, permissions, and document persistence, and IndexedDB for local storage." },
+    outcome: { ar: "تطبيق منشور متاح للمعاينة. يدعم التوثيق المزامنة التعاونية والتخزين المحلي، دون عرض أرقام أداء أو استخدام غير موثقة.", en: "A live application is available to explore. The documentation describes collaborative synchronization and local persistence; no unsupported performance or adoption metrics are claimed." },
+    highlights: {
+      ar: ["تحرير مستندات تعاوني باستخدام Yjs وProseMirror", "تبادل تحديثات المستند عبر Socket.io", "مصادقة وصلاحيات وحفظ مستمر عبر Supabase", "تخزين محلي للمستندات باستخدام IndexedDB"],
+      en: ["Collaborative editing with Yjs and ProseMirror", "Document updates exchanged through Socket.io", "Authentication, permissions, and persistence with Supabase", "Local document persistence with IndexedDB"],
+    },
+    stack: ["Next.js", "React", "Yjs", "Socket.io", "ProseMirror", "Supabase", "PostgreSQL", "IndexedDB"],
+    live: "https://sync-code-gules.vercel.app/",
   },
   {
     slug: "dentalflow-android", number: "04", title: "DentalFlow", category: "app", status: "development", year: "2026", art: "dental-app",

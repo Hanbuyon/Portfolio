@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const root = new URL("../build/client/", import.meta.url);
 const rootPath = fileURLToPath(root);
-const siteUrl = (process.env.SITE_URL || `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL || "ahmednazeeh.vercel.app"}`).replace(/\/$/, "");
+const siteUrl = (process.env.SITE_URL || "https://ahmednazeeh.vercel.app").replace(/\/$/, "");
 
 async function pages(directory) {
   const entries = await readdir(directory, { withFileTypes: true });

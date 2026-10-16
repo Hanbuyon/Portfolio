@@ -78,7 +78,7 @@ function Featured({ lang }: { lang: Lang }) {
 function ProjectCollection({ lang }: { lang: Lang }) {
   const t = ui[lang];
   const [filter, setFilter] = useState<"all" | ProjectCategory>("all");
-  const ordered = [projects[3],projects[5],projects[4],projects[6],projects[7],projects[0],projects[1],projects[2]];
+  const ordered = [projects[4],projects[5],projects[6],projects[7],projects[8],projects[0],projects[1],projects[2],projects[3]];
   const visible = filter === "all" ? ordered : ordered.filter((project) => project.category === filter);
   return <section className="section all-projects-section" id="all-projects"><div className="wrap">
     <SectionHead index="02 / 06" kicker="THE ARCHIVE" title={t.all} intro={t.allIntro}/>

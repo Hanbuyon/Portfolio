@@ -32,6 +32,12 @@ export const galleryBySlug: Record<string, GalleryImage[]> = {
     shot("manhwa-tool-kit", "projects", "إدارة مشاريع المانهوا", "Manhwa project management"),
     shot("manhwa-tool-kit", "keys", "إعداد مفاتيح الخدمات", "Provider key settings"),
   ],
+  synccode: [
+    shot("synccode", "landing", "واجهة SyncCode الرئيسية", "SyncCode landing page"),
+    shot("synccode", "share", "نافذة مشاركة المستند وإدارة الوصول", "Document sharing and access dialog"),
+    shot("synccode", "login", "واجهة تسجيل الدخول", "Sign-in screen"),
+    shot("synccode", "ai", "لوحة المساعد الذكي", "AI assistant panel", true),
+  ],
   "dentalflow-android": [
     shot("dentalflow-android", "appointments", "إدارة المواعيد", "Appointment management", true),
     shot("dentalflow-android", "owner", "واجهة المالك", "Owner dashboard", true),

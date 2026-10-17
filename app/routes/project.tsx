@@ -7,6 +7,7 @@ import { ProjectGallery } from "../components/ProjectGallery";
 import { galleryBySlug } from "../data/gallery";
 import { Reveal } from "../components/Reveal";
 import { projects, ui, type Lang } from "../data/site";
+import { siteOrigin, socialImageMeta } from "../data/seo";
 
 export function meta({ params }: { params: { lang?: string; slug?: string } }) {
   const lang: Lang = params.lang === "en" ? "en" : "ar";
@@ -17,9 +18,9 @@ export function meta({ params }: { params: { lang?: string; slug?: string } }) {
     { name: "description", content: project.summary[lang] },
     { property: "og:title", content: `${project.title} — Ahmed Nazeeh` },
     { property: "og:description", content: project.summary[lang] },
-    { property: "og:image", content: "/og-cover.jpg" },
+    { property: "og:url", content: `${siteOrigin}/${lang}/projects/${project.slug}` },
     { property: "og:type", content: "article" },
-    { name: "twitter:card", content: "summary_large_image" },
+    ...socialImageMeta(lang),
   ];
 }
 

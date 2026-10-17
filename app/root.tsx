@@ -6,6 +6,7 @@ import "@fontsource/ibm-plex-sans-arabic/400.css";
 import "@fontsource/ibm-plex-sans-arabic/500.css";
 import "@fontsource/ibm-plex-sans-arabic/600.css";
 import "@fontsource/ibm-plex-sans-arabic/700.css";
+import { siteOrigin } from "./data/seo";
 
 export const links = () => [
   { rel: "stylesheet", href: styles },
@@ -16,12 +17,14 @@ export const links = () => [
 export function Layout({ children }: { children: ReactNode }) {
   const location = useLocation();
   const lang = location.pathname.startsWith("/en") ? "en" : "ar";
+  const canonicalPath = location.pathname === "/" ? "/ar" : location.pathname;
   return (
     <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0b0f14" />
+        <link rel="canonical" href={`${siteOrigin}${canonicalPath}`} />
         <link rel="alternate" hrefLang="ar" href={location.pathname.replace(/^\/(ar|en)/, "/ar")} />
         <link rel="alternate" hrefLang="en" href={location.pathname.replace(/^\/(ar|en)/, "/en")} />
         <link rel="alternate" hrefLang="x-default" href="/ar" />

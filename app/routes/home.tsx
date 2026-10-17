@@ -7,6 +7,7 @@ import { HeroSceneHost } from "../components/HeroSceneHost";
 import { ProjectVisual } from "../components/ProjectVisual";
 import { Reveal } from "../components/Reveal";
 import { profile, projects, experience, education, credentials, skillGroups, languages, ui, type Lang, type ProjectCategory } from "../data/site";
+import { siteOrigin, socialImageMeta } from "../data/seo";
 
 const categories: Array<"all" | ProjectCategory> = ["all", "web", "ai", "app", "operations"];
 
@@ -17,9 +18,9 @@ export function meta({ params }: { params: { lang?: string } }) {
     { name: "description", content: profile.intro[lang] },
     { property: "og:title", content: `${profile.shortName[lang]} — Portfolio` },
     { property: "og:description", content: profile.intro[lang] },
-    { property: "og:image", content: "/og-cover.jpg" },
+    { property: "og:url", content: `${siteOrigin}/${lang}` },
     { property: "og:type", content: "website" },
-    { name: "twitter:card", content: "summary_large_image" },
+    ...socialImageMeta(lang),
   ];
 }
 

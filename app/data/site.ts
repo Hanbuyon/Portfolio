@@ -36,9 +36,9 @@ export const profile = {
     en: "I turn practical needs into usable software. My hands-on work spans web development, databases, and AI integrations, alongside administrative and accounting work that gave me a direct view of everyday workflows. I care about clear interfaces, reliable logic, and an honest account of what is implemented and what is still in progress.",
   },
   email: "ahmednazn2020@gmail.com",
-  phone: "+967 730 177 488",
+  phone: "+967 776 049 183",
   github: "https://github.com/Hanbuyon",
-  whatsapp: "https://wa.me/967730177488",
+  whatsapp: "https://wa.me/967776049183",
   location: { ar: "تعز، اليمن", en: "Taiz, Yemen" },
 };
 
